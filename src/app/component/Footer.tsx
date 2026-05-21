@@ -1,3 +1,4 @@
+import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="bg-[#1a1a2e] text-white">

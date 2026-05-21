@@ -1,39 +1,48 @@
+import Link from "next/link";
 const services = [
   {
-    icon: "⛽",
+    image: "/img1.jpg",
     title: "Downstream Supply",
-    description:
-      "We supply petroleum products including PMS, AGO, and DPK to filling stations and bulk buyers across Nigeria through a reliable distribution network.",
-    link: "/services/downstream",
+    slug: "downstream",   // ✅ matches /services/downstream/page.tsx
+    description: "...",
   },
   {
-    icon: "🚢",
+    image: "/img2.jpg",
     title: "Marine Logistics",
-    description:
-      "We provide vessel charter and marine logistics services for the transportation of petroleum products across Nigerian waterways and beyond.",
-    link: "/services/marine",
+    slug: "marine",       // ✅ matches /services/marine
+    description: "...",
   },
   {
-    icon: "🚛",
+    image: "/img3.jpg",
+    title: "Upstream Supply",
+    slug: "upstream",     // ✅ matches /services/upstream
+    description: "...",
+  },
+  {
+    image: "/img4.jpg",
     title: "Logistics & Haulage",
-    description:
-      "Our fleet of trucks and tankers ensures safe and timely delivery of petroleum products to clients across all regions of Nigeria.",
-    link: "/services/haulage",
+    slug: "haulage",      // ✅ matches /services/haulage
+    description: "...",
   },
   {
-    icon: "💰",
+    image: "/img1.jpg",
     title: "Project Financing",
-    description:
-      "We facilitate project financing and financial instruments including SBLC, BG, DLC, and POF for oil & gas transactions locally and internationally.",
-    link: "/services/financing",
+    slug: "financing",    // ✅ matches /services/financing/page.tsx
+    description: "...",
+  },
+  {
+    image: "/img2.jpg",
+    title: "Storage Facilities",
+    slug: "storage",      // ⚠️ no folder yet — create /services/storage/page.tsx
+    description: "...",
   },
 ];
-
 const Services = () => {
   return (
     <section className="py-16 px-10 bg-gray-50">
       <div className="max-w-6xl mx-auto">
 
+        {/* Section Header */}
         <div className="text-center mb-12">
           <p className="text-[#f0a500] font-semibold uppercase tracking-widest text-sm mb-2">
             What We Offer
@@ -46,23 +55,38 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg p-8 text-center shadow-md hover:shadow-xl transition-all hover:-translate-y-1 flex flex-col"
+              className="relative rounded-xl overflow-hidden h-64 group cursor-pointer shadow-md"
             >
-              <div className="bg-[#003366] text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl mx-auto mb-5">
-                {service.icon}
+              {/* Background Image */}
+              <div
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                style={{ backgroundImage: `url(${service.image})` }}
+              ></div>
+
+              {/* Default Dark Overlay */}
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/65 transition-all duration-500"></div>
+
+              {/* Default - Title at bottom */}
+              <div className="absolute bottom-0 left-0 right-0 p-5 transition-all duration-500 group-hover:translate-y-[-8px]">
+                <h3 className="text-white font-bold text-lg">{service.title}</h3>
               </div>
-              <h3 className="text-[#003366] font-bold text-lg mb-3">{service.title}</h3>
-              <p className="text-gray-500 text-sm leading-relaxed flex-1">{service.description}</p>
-              
-                <a href={service.link}
-                className="mt-5 text-[#003366] font-semibold text-sm hover:text-[#f0a500] transition-all"
-              >
-                [ Read more ]
-              </a>
+
+              {/* Hover - Extra description slides up */}
+              <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-full group-hover:translate-y-0 transition-all duration-500">
+                <h3 className="text-white font-bold text-lg mb-2">{service.title}</h3>
+                <p className="text-white/90 text-sm leading-relaxed mb-3">{service.description}</p>
+                
+              <Link href={`/services/${service.slug}`}
+  className="inline-block text-xs font-bold text-black bg-[#f0a500] px-4 py-2 rounded hover:bg-yellow-500 transition-all">
+  Know More...
+</Link>
+              </div>
+
             </div>
           ))}
         </div>

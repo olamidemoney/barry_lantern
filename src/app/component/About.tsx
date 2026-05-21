@@ -13,12 +13,9 @@ const About = () => {
         {/* Right - Text */}
         <div className="w-full md:w-1/2">
           <p className="text-[#f0a500] font-semibold uppercase tracking-widest text-sm mb-2">Who We Are</p>
-          <h2 className="text-3xl font-bold text-[#003366] mb-4">About Barry Lantern Oil & Gas Limited</h2>
+          <h2 className="text-3xl font-bold text-[#003366] mb-4">Integrated Oil & Gas Solutions You Can Trust</h2>
           <p className="text-gray-600 leading-relaxed mb-8">
-            Barry Lantern Oil & Gas Limited (RC: 97875) is a duly registered oil & gas marketing
-            and marine logistics company operating across Nigeria. We deliver reliable energy
-            solutions spanning downstream supply, vessel charter, haulage, and project financing
-            with a commitment to excellence and integrity.
+           <strong>Barry Lantern Oil & Gas Limited (RC: 97875)</strong> is a duly registered oil & gas marketing, haulage, and marine logistics company operating across Nigeria. We provide reliable energy solutions spanning upstream and downstream supply, marine logistics, vessel operations, haulage services, and project financing, delivering excellence, efficiency, and integrity across every project.
           </p>
 
           {/* Vision */}
