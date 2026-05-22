@@ -116,51 +116,47 @@ const Blog = () => {
         </div>
 
         {/* Blog Grid */}
+        {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {posts.map((post, index) => (
             <div
               key={index}
-              className="w-full rounded-[22px] overflow-hidden bg-[#d9a431] shadow-xl group"
+              className="relative rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
             >
-              {/* Image */}
-              <div className="relative h-44 overflow-hidden">
-                <div
-                  className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                  style={{ backgroundImage: `url(${post.image})` }}
-                ></div>
-              </div>
-
-              {/* Curved Content Area */}
+              {/* Background Image */}
               <div
-                className="relative px-6 pt-6 pb-6 bg-[#d9a431]"
-                style={{
-                  borderTopLeftRadius: "100% 80px",
-                  borderTopRightRadius: "100% 80px",
-                  marginTop: "-45px",
-                }}
-              >
-                {/* Date */}
-                <p className="text-white/70 text-xs mb-3">{post.date}</p>
+                className="w-full h-72 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                style={{ backgroundImage: `url(${post.image})` }}
+              ></div>
 
-                {/* Title */}
-                <h3 className="text-white font-bold text-sm leading-snug mb-3">
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+              {/* Gold accent line on hover */}
+              <div className="absolute top-0 left-0 w-0 h-1 bg-[#f0a500] group-hover:w-full transition-all duration-500"></div>
+
+              {/* Content */}
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <span className="text-[#f0a500] text-xs font-semibold uppercase tracking-widest mb-2 block">
+                  {post.date}
+                </span>
+                <h3 className="text-white font-bold text-base leading-snug mb-0 group-hover:mb-3 transition-all duration-300">
                   {post.title}
                 </h3>
-
-                {/* Description */}
-                <p className="text-white/90 text-xs leading-relaxed mb-6">
-                  {post.excerpt}
-                </p>
-
-                {/* Read More */}
-                <div className="flex justify-end">
+                <div className="max-h-0 overflow-hidden group-hover:max-h-24 transition-all duration-500">
+                  <p className="text-white/80 text-xs leading-relaxed mt-2">
+                    {post.excerpt}
+                  </p>
+                </div>
+                <div className="mt-0 opacity-0 group-hover:opacity-100 group-hover:mt-3 transition-all duration-500">
                   
                    <a href={post.link}
-                    className="text-white border border-white/70 px-4 py-2 text-xs hover:bg-white hover:text-[#d9a431] transition-all">
-                    Learn More
+                    className="inline-flex items-center gap-2 bg-[#f0a500] text-black text-xs font-bold px-4 py-2 rounded-full hover:bg-yellow-500 transition-all">
+                    Learn More →
                   </a>
                 </div>
               </div>
+
             </div>
           ))}
         </div>

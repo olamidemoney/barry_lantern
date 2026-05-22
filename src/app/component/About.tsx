@@ -1,21 +1,23 @@
+import AnimateOnScroll from "./AnimateOnScroll";
+
 const About = () => {
   return (
     <section className="py-16 px-10 bg-white">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 items-center">
 
         {/* Left - Image */}
-        <div className="w-full md:w-1/2">
+        <AnimateOnScroll animation="animate-slideInLeft" className="w-full md:w-1/2">
           <div className="w-full h-80 bg-gray-200 flex items-center justify-center border-2 border-gray-300">
             <span className="text-gray-400 text-sm">Company Image Here</span>
           </div>
-        </div>
+        </AnimateOnScroll>
 
         {/* Right - Text */}
-        <div className="w-full md:w-1/2">
+        <AnimateOnScroll animation="animate-slideInRight" delay="animate-delay-200" className="w-full md:w-1/2">
           <p className="text-[#f0a500] font-semibold uppercase tracking-widest text-sm mb-2">Who We Are</p>
           <h2 className="text-3xl font-bold text-[#003366] mb-4">Integrated Oil & Gas Solutions You Can Trust</h2>
           <p className="text-gray-600 leading-relaxed mb-8">
-           <strong>Barry Lantern Oil & Gas Limited (RC: 97875)</strong> is a duly registered oil & gas marketing, haulage, and marine logistics company operating across Nigeria. We provide reliable energy solutions spanning upstream and downstream supply, marine logistics, vessel operations, haulage services, and project financing, delivering excellence, efficiency, and integrity across every project.
+            <strong>Barry Lantern Oil & Gas Limited (RC: 97875)</strong> is a duly registered oil & gas marketing, haulage, and marine logistics company operating across Nigeria. We provide reliable energy solutions spanning upstream and downstream supply, marine logistics, vessel operations, haulage services, and project financing, delivering excellence, efficiency, and integrity across every project.
           </p>
 
           {/* Vision */}
@@ -46,7 +48,7 @@ const About = () => {
             </div>
           </div>
 
-        </div>
+        </AnimateOnScroll>
       </div>
     </section>
   );

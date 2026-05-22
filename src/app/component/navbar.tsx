@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [aboutOpen, setAboutOpen] = useState(false);
@@ -9,6 +10,7 @@ const Navbar = () => {
   const [contactOpen, setContactOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   const navRef = useRef<HTMLElement>(null);
 
@@ -18,7 +20,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close everything when clicking outside
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(e.target as Node)) {
@@ -42,7 +43,7 @@ const Navbar = () => {
   return (
     <header
       ref={navRef as React.RefObject<HTMLElement>}
-      className={`w-full fixed top-0 left-0 z-50 font-sans transition-all duration-300 ${scrolled ? "bg-white shadow-md" : "bg-transparent"}`}
+      className={`w-full fixed top-0 left-0 z-50 font-sans transition-all duration-300 ${scrolled ? "bg-[#001f3f] shadow-md" : "bg-transparent"}`}
     >
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
 
@@ -56,10 +57,10 @@ const Navbar = () => {
             />
           </div>
           <div>
-            <h1 className={`text-lg font-bold leading-tight transition-all duration-300 ${scrolled ? "text-[#003366]" : "text-white"}`}>
+            <h1 className="text-lg font-bold leading-tight text-white">
               Barry Lantern Oil & Gas Limited
             </h1>
-            <p className={`text-xs tracking-wider transition-all duration-300 ${scrolled ? "text-gray-400" : "text-gray-200"}`}>
+            <p className="text-xs tracking-wider text-gray-300">
               Oil & Gas Marketing | Marine Logistics
             </p>
           </div>
@@ -68,7 +69,7 @@ const Navbar = () => {
         {/* Desktop Nav Links */}
         <nav className="hidden md:flex items-center gap-8">
 
-          <Link href="/" onClick={closeAll} className={`font-bold text-base transition-all hover:text-[#f0a500] ${scrolled ? "text-gray-700" : "text-white"}`}>
+          <Link href="/" onClick={closeAll} className={`font-bold text-base transition-all hover:text-[#f0a500] pb-1 ${pathname === "/" ? "text-[#f0a500] border-b-2 border-[#f0a500]" : "text-white"}`}>
             Home
           </Link>
 
@@ -80,16 +81,14 @@ const Navbar = () => {
           >
             <button
               onClick={() => setAboutOpen(!aboutOpen)}
-              className={`font-bold text-base flex items-center gap-1 transition-all hover:text-[#f0a500] ${aboutOpen ? "text-[#f0a500]" : scrolled ? "text-gray-700" : "text-white"}`}
+              className={`font-bold text-base flex items-center gap-1 transition-all hover:text-[#f0a500] pb-1 ${pathname.startsWith("/about") ? "text-[#f0a500] border-b-2 border-[#f0a500]" : "text-white"}`}
             >
               About Us ▾
             </button>
             {aboutOpen && (
-              <div className="absolute top-full left-0 pt-2 z-50 w-44">
-                <div className="bg-white shadow-xl border border-gray-100 rounded">
+              <div className="absolute top-full left-0 pt-2 z-50 w-48">
+                <div className="bg-white shadow-xl border border-gray-100 rounded animate-fadeDown">
                   <Link href="/about" onClick={closeAll} className="block px-5 py-3 hover:bg-[#f0a500] hover:text-white text-sm text-gray-700 transition-all">About Us</Link>
-                  <Link href="/about/vision" onClick={closeAll} className="block px-5 py-3 hover:bg-[#f0a500] hover:text-white text-sm text-gray-700 transition-all">Vision</Link>
-                  <Link href="/about/core-values" onClick={closeAll} className="block px-5 py-3 hover:bg-[#f0a500] hover:text-white text-sm text-gray-700 transition-all">Core Values</Link>
                   <Link href="/about/blog" onClick={closeAll} className="block px-5 py-3 hover:bg-[#f0a500] hover:text-white text-sm text-gray-700 transition-all">Blog and Press Release</Link>
                 </div>
               </div>
@@ -104,13 +103,13 @@ const Navbar = () => {
           >
             <button
               onClick={() => setServicesOpen(!servicesOpen)}
-              className={`font-bold text-base flex items-center gap-1 transition-all hover:text-[#f0a500] ${servicesOpen ? "text-[#f0a500]" : scrolled ? "text-gray-700" : "text-white"}`}
+              className={`font-bold text-base flex items-center gap-1 transition-all hover:text-[#f0a500] pb-1 ${pathname.startsWith("/services") ? "text-[#f0a500] border-b-2 border-[#f0a500]" : "text-white"}`}
             >
               Our Services ▾
             </button>
             {servicesOpen && (
               <div className="absolute top-full left-0 pt-2 z-50 w-52">
-                <div className="bg-white shadow-xl border border-gray-100 rounded">
+                <div className="bg-white shadow-xl border border-gray-100 rounded animate-fadeDown">
                   <Link href="/services/upstream" onClick={closeAll} className="block px-5 py-3 hover:bg-[#f0a500] hover:text-white text-sm text-gray-700 transition-all">Upstream Supply</Link>
                   <Link href="/services/downstream" onClick={closeAll} className="block px-5 py-3 hover:bg-[#f0a500] hover:text-white text-sm text-gray-700 transition-all">Downstream Supply</Link>
                   <Link href="/services/marine" onClick={closeAll} className="block px-5 py-3 hover:bg-[#f0a500] hover:text-white text-sm text-gray-700 transition-all">Marine Logistics</Link>
@@ -129,13 +128,13 @@ const Navbar = () => {
           >
             <button
               onClick={() => setContactOpen(!contactOpen)}
-              className={`font-bold text-base flex items-center gap-1 transition-all hover:text-[#f0a500] ${contactOpen ? "text-[#f0a500]" : scrolled ? "text-gray-700" : "text-white"}`}
+              className={`font-bold text-base flex items-center gap-1 transition-all hover:text-[#f0a500] pb-1 ${pathname.startsWith("/contact") ? "text-[#f0a500] border-b-2 border-[#f0a500]" : "text-white"}`}
             >
               Contact ▾
             </button>
             {contactOpen && (
               <div className="absolute top-full left-0 pt-2 z-50 w-48">
-                <div className="bg-white shadow-xl border border-gray-100 rounded">
+                <div className="bg-white shadow-xl border border-gray-100 rounded animate-fadeDown">
                   <Link href="/contact" onClick={closeAll} className="block px-5 py-3 hover:bg-[#f0a500] hover:text-white text-sm text-gray-700 transition-all">Contact Form</Link>
                   <Link href="/contact/service-request" onClick={closeAll} className="block px-5 py-3 hover:bg-[#f0a500] hover:text-white text-sm text-gray-700 transition-all">Service Request</Link>
                 </div>
@@ -143,7 +142,7 @@ const Navbar = () => {
             )}
           </div>
 
-          <Link href="/partnership" onClick={closeAll} className={`font-bold text-base transition-all hover:text-[#f0a500] ${scrolled ? "text-gray-700" : "text-white"}`}>
+          <Link href="/partnership" onClick={closeAll} className={`font-bold text-base transition-all hover:text-[#f0a500] pb-1 ${pathname === "/partnership" ? "text-[#f0a500] border-b-2 border-[#f0a500]" : "text-white"}`}>
             Global Partnership
           </Link>
 
@@ -158,7 +157,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className={`md:hidden text-2xl ${scrolled ? "text-gray-700" : "text-white"}`}
+          className="md:hidden text-white text-2xl"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           ☰
@@ -168,70 +167,65 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 shadow-xl">
+        <div className="md:hidden bg-[#001f3f] border-t border-gray-700 shadow-xl">
 
-          <Link href="/" onClick={closeAll} className="block px-6 py-3 text-sm font-bold text-gray-700 hover:bg-[#f0a500] hover:text-white transition-all">
+          <Link href="/" onClick={closeAll} className="block px-6 py-3 text-sm font-bold text-white hover:bg-[#f0a500] hover:text-black transition-all">
             Home
           </Link>
 
-          {/* About accordion */}
-          <div className="border-t border-gray-100">
+          <div className="border-t border-gray-700">
             <button
               onClick={() => setAboutOpen(!aboutOpen)}
-              className="w-full text-left px-6 py-3 text-sm font-bold text-gray-700 hover:bg-[#f0a500] hover:text-white transition-all flex justify-between items-center"
+              className="w-full text-left px-6 py-3 text-sm font-bold text-white hover:bg-[#f0a500] hover:text-black transition-all flex justify-between items-center"
             >
-              About us <span>{aboutOpen ? "▴" : "▾"}</span>
+              About Us <span>{aboutOpen ? "▴" : "▾"}</span>
             </button>
             {aboutOpen && (
-              <div className="bg-gray-50 border-t border-gray-100">
-                <Link href="/about" onClick={closeAll} className="block px-10 py-2.5 text-sm text-gray-600 hover:bg-[#f0a500] hover:text-white transition-all">About Us</Link>
-                <Link href="/about/vision" onClick={closeAll} className="block px-10 py-2.5 text-sm text-gray-600 hover:bg-[#f0a500] hover:text-white transition-all">Vision</Link>
-                <Link href="/about/core-values" onClick={closeAll} className="block px-10 py-2.5 text-sm text-gray-600 hover:bg-[#f0a500] hover:text-white transition-all">Core Values</Link>
-                <Link href="/about/blog" onClick={closeAll} className="block px-10 py-2.5 text-sm text-gray-600 hover:bg-[#f0a500] hover:text-white transition-all">Blog and Press Release</Link>
+              <div className="bg-[#002a52] border-t border-gray-700">
+                <Link href="/about" onClick={closeAll} className="block px-10 py-2.5 text-sm text-gray-300 hover:bg-[#f0a500] hover:text-black transition-all">About Us</Link>
+                <Link href="/about/blog" onClick={closeAll} className="block px-10 py-2.5 text-sm text-gray-300 hover:bg-[#f0a500] hover:text-black transition-all">Blog and Press Release</Link>
               </div>
             )}
           </div>
 
-          {/* Services accordion */}
-          <div className="border-t border-gray-100">
+          <div className="border-t border-gray-700">
             <button
               onClick={() => setServicesOpen(!servicesOpen)}
-              className="w-full text-left px-6 py-3 text-sm font-bold text-gray-700 hover:bg-[#f0a500] hover:text-white transition-all flex justify-between items-center"
+              className="w-full text-left px-6 py-3 text-sm font-bold text-white hover:bg-[#f0a500] hover:text-black transition-all flex justify-between items-center"
             >
               Our Services <span>{servicesOpen ? "▴" : "▾"}</span>
             </button>
             {servicesOpen && (
-              <div className="bg-gray-50 border-t border-gray-100">
-                <Link href="/services/upstream" onClick={closeAll} className="block px-10 py-2.5 text-sm text-gray-600 hover:bg-[#f0a500] hover:text-white transition-all">Upstream Supply</Link>
-                <Link href="/services/downstream" onClick={closeAll} className="block px-10 py-2.5 text-sm text-gray-600 hover:bg-[#f0a500] hover:text-white transition-all">Downstream Supply</Link>
-                <Link href="/services/marine" onClick={closeAll} className="block px-10 py-2.5 text-sm text-gray-600 hover:bg-[#f0a500] hover:text-white transition-all">Marine Logistics</Link>
-                <Link href="/services/haulage" onClick={closeAll} className="block px-10 py-2.5 text-sm text-gray-600 hover:bg-[#f0a500] hover:text-white transition-all">Logistics & Haulage</Link>
-                <Link href="/services/financing" onClick={closeAll} className="block px-10 py-2.5 text-sm text-gray-600 hover:bg-[#f0a500] hover:text-white transition-all">Project Financing</Link>
+              <div className="bg-[#002a52] border-t border-gray-700">
+                <Link href="/services/upstream" onClick={closeAll} className="block px-10 py-2.5 text-sm text-gray-300 hover:bg-[#f0a500] hover:text-black transition-all">Upstream Supply</Link>
+                <Link href="/services/downstream" onClick={closeAll} className="block px-10 py-2.5 text-sm text-gray-300 hover:bg-[#f0a500] hover:text-black transition-all">Downstream Supply</Link>
+                <Link href="/services/marine" onClick={closeAll} className="block px-10 py-2.5 text-sm text-gray-300 hover:bg-[#f0a500] hover:text-black transition-all">Marine Logistics</Link>
+                <Link href="/services/haulage" onClick={closeAll} className="block px-10 py-2.5 text-sm text-gray-300 hover:bg-[#f0a500] hover:text-black transition-all">Logistics & Haulage</Link>
+                <Link href="/services/financing" onClick={closeAll} className="block px-10 py-2.5 text-sm text-gray-300 hover:bg-[#f0a500] hover:text-black transition-all">Project Financing</Link>
               </div>
             )}
           </div>
 
-          {/* Contact accordion */}
-          <div className="border-t border-gray-100">
+          <div className="border-t border-gray-700">
             <button
               onClick={() => setContactOpen(!contactOpen)}
-              className="w-full text-left px-6 py-3 text-sm font-bold text-gray-700 hover:bg-[#f0a500] hover:text-white transition-all flex justify-between items-center"
+              className="w-full text-left px-6 py-3 text-sm font-bold text-white hover:bg-[#f0a500] hover:text-black transition-all flex justify-between items-center"
             >
               Contact <span>{contactOpen ? "▴" : "▾"}</span>
             </button>
             {contactOpen && (
-              <div className="bg-gray-50 border-t border-gray-100">
-                <Link href="/contact" onClick={closeAll} className="block px-10 py-2.5 text-sm text-gray-600 hover:bg-[#f0a500] hover:text-white transition-all">Contact Form</Link>
-                <Link href="/contact/service-request" onClick={closeAll} className="block px-10 py-2.5 text-sm text-gray-600 hover:bg-[#f0a500] hover:text-white transition-all">Service Request</Link>
+              <div className="bg-[#002a52] border-t border-gray-700">
+                <Link href="/contact" onClick={closeAll} className="block px-10 py-2.5 text-sm text-gray-300 hover:bg-[#f0a500] hover:text-black transition-all">Contact Form</Link>
+                <Link href="/contact/service-request" onClick={closeAll} className="block px-10 py-2.5 text-sm text-gray-300 hover:bg-[#f0a500] hover:text-black transition-all">Service Request</Link>
               </div>
             )}
           </div>
 
-          <Link href="/partnership" onClick={closeAll} className="block px-6 py-3 text-sm font-bold text-gray-700 border-t border-gray-100 hover:bg-[#f0a500] hover:text-white transition-all">
+          <Link href="/partnership" onClick={closeAll} className="block px-6 py-3 text-sm font-bold text-white border-t border-gray-700 hover:bg-[#f0a500] hover:text-black transition-all">
             Global Partnership
           </Link>
 
-          <div className="px-6 py-4 border-t border-gray-100">
+          <div className="px-6 py-4 border-t border-gray-700">
             <a href="/contact/service-request" onClick={closeAll} className="block bg-[#f0a500] text-black font-bold px-5 py-2 rounded text-sm text-center hover:bg-yellow-500 transition-all">
               Order Now
             </a>
