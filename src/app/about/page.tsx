@@ -1,5 +1,6 @@
-import Navbar from "../component/navbar";
-import Footer from "../component/Footer";
+
+import Navbar from "@/app/component/navbar";
+import Footer from "@/app/component/Footer";
 
 export default function AboutPage() {
   return (
@@ -9,13 +10,13 @@ export default function AboutPage() {
 
         {/* Hero Banner */}
         <div
-          className="w-full h-64 bg-cover bg-center relative flex items-center justify-center"
+          className="w-full h-64 bg-cover bg-center relative flex items-center"
           style={{ backgroundImage: "url('/img1.jpg')" }}
         >
           <div className="absolute inset-0 bg-black/60"></div>
-          <div className="relative z-10 text-center">
-            <h1 className="text-4xl font-bold text-white pt-20">About Us</h1>
-           
+          <div className="relative z-10 px-20">
+            <h1 className="text-4xl font-bold text-white">About Us</h1>
+            <p className="text-gray-300 mt-2 text-sm">Home / About Us</p>
           </div>
         </div>
 
@@ -23,6 +24,7 @@ export default function AboutPage() {
         <section className="py-16 px-10 bg-white">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 items-start">
 
+            {/* Left - Image */}
             <div className="w-full md:w-1/2">
               <div
                 className="w-full h-[500px] bg-cover bg-center rounded-lg shadow-lg"
@@ -30,6 +32,7 @@ export default function AboutPage() {
               ></div>
             </div>
 
+            {/* Right - Text */}
             <div className="w-full md:w-1/2">
               <div className="flex items-center gap-3 mb-2">
                 <p className="text-[#f0a500] font-semibold text-sm">Welcome to</p>
@@ -52,13 +55,13 @@ export default function AboutPage() {
               </p>
               <p className="text-gray-600 leading-relaxed mb-4 text-justify">
                 We focus on creating long-term value through excellent service delivery and
-                customer satisfaction, while ensuring quality and constructive partnerships
-                with our various stakeholders.
+                customer satisfaction, while ensuring quality and constructive partnerships with
+                our various stakeholders.
               </p>
               <p className="text-gray-600 leading-relaxed text-justify">
                 We are continuously evolving to ensure that access to our products and services
                 is seamless, cost-effective, and safe. We are highly driven to be recognized as
-                market leaders in the Nigerian Oil and Gas Sector, renowned for integrity,
+                market leaders in the Nigerian Oil and Gas Sector — renowned for integrity,
                 passion for excellence, and sustainable growth.
               </p>
             </div>
@@ -73,8 +76,8 @@ export default function AboutPage() {
               <div className="text-4xl mb-4">🔭</div>
               <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
               <p className="text-gray-300 leading-relaxed">
-                To be Nigeria's most trusted and leading oil and gas marketing, marine logistics,
-                and project financing company, delivering world-class energy solutions with
+                To be Nigeria's most trusted and leading oil & gas marketing, marine logistics,
+                and project financing company — delivering world-class energy solutions with
                 integrity, excellence, and a commitment to sustainable growth across Africa
                 and beyond.
               </p>
@@ -105,15 +108,13 @@ export default function AboutPage() {
         {/* Mission */}
         <section className="py-16 px-10 bg-white">
           <div className="max-w-6xl mx-auto text-center">
-            <p className="text-[#f0a500] font-semibold uppercase tracking-widest text-sm mb-2">
-              What Drives Us
-            </p>
+            <p className="text-[#f0a500] font-semibold uppercase tracking-widest text-sm mb-2">What Drives Us</p>
             <h2 className="text-3xl font-bold text-[#003366] mb-8">Our Mission</h2>
             <p className="text-gray-600 leading-relaxed max-w-3xl mx-auto text-lg">
-              To provide reliable, efficient, and world-class oil and gas marketing, marine
+              To provide reliable, efficient, and world-class oil & gas marketing, marine
               logistics, haulage, and project financing services that empower businesses
-              and communities across Nigeria and Africa, guided by the principle:
-              <span className="text-[#f0a500] font-bold"> In God We Trust.</span>
+              and communities across Nigeria and Africa — guided by the principle:
+              <em className="text-[#f0a500] font-bold"> In God We Trust.</em>
             </p>
           </div>
         </section>
