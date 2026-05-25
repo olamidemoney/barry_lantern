@@ -3,14 +3,36 @@
 import { useEffect, useState } from "react";
 
 const slides = [
-  {
-    image: "/barry_lantern_storage_facilities.jpg",
-    label: "Welcome to Barry Lantern Oil & Gas Limited",
-    title: "Powering Nigeria's",
-    highlight: "Energy Future",
+ {
+  image: "/barry_lantern_storage_facilities.jpg",
+  mobilePosition: "right",
+  label: "Welcome to Barry Lantern Oil & Gas Limited",
+  title: "Powering Nigeria's",
+  highlight: "Energy Future",
+  description:
+    "A leading oil & gas marketing and marine logistics company delivering reliable energy solutions across Nigeria and beyond.",
+},
+
+ {
+    image: "/charter.png",
+    label: "Our Marine Logistics Services",
+    title: "Reliable Vessel",
+    highlight: "Charter Services",
     description:
-      "A leading oil & gas marketing and marine logistics company delivering reliable energy solutions across Nigeria and beyond.",
+      "We provide world-class marine logistics and vessel charter services across Nigerian waterways and beyond.",
   },
+
+
+
+ {
+    image: "/barry_lantern_storage_facilities.png",
+    label: "Our Marine Logistics Services",
+    title: "Reliable Vessel",
+    highlight: "Charter Services",
+    description:
+      "We provide world-class marine logistics and vessel charter services across Nigerian waterways and beyond.",
+  },
+
   {
     image: "/img 2.jpg",
     label: "Our Marine Logistics Services",
@@ -19,6 +41,7 @@ const slides = [
     description:
       "We provide world-class marine logistics and vessel charter services across Nigerian waterways and beyond.",
   },
+
   {
     image: "/img 3.jpg",
     label: "Downstream Supply",
@@ -27,6 +50,7 @@ const slides = [
     description:
       "Supplying PMS, AGO, and DPK to filling stations and bulk buyers across all regions of Nigeria.",
   },
+
   {
     image: "/barry_lantern_image.jpg",
     label: "Project Financing",
@@ -63,12 +87,16 @@ const Hero = () => {
   const slide = slides[current];
 
   return (
-    <section
-      className="relative w-full h-screen bg-cover bg-center flex items-center transition-all duration-700"
-      style={{ backgroundImage: `url('${slide.image}')` }}
-    >
+ <section
+  className="relative w-full h-screen bg-cover flex items-center transition-all duration-700 pt-[60px]"
+  style={{ 
+    backgroundImage: `url('${slide.image}')`,
+    backgroundPosition: slide.mobilePosition || "center"
+  }}
+>
+
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute inset-0 bg-black/30"></div>
 
       {/* Content */}
       <div
