@@ -216,7 +216,7 @@ export default function FinancingPage() {
                 ))}
               </div>
               
-                <a ghref="/contact/service-request"
+                <a href="/contact/service-request"
                 className="inline-block mt-8 bg-[#f0a500] text-black font-bold px-8 py-3 rounded hover:bg-yellow-500 transition-all text-sm"
               >
                 Discuss Monetization
