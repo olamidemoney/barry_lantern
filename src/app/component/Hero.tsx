@@ -12,6 +12,39 @@ const slides = [
     description:
       "A leading oil & gas marketing and marine logistics company delivering reliable energy solutions across Nigeria and beyond.",
   },
+
+
+    {
+    image: "/haulage_trucks.png",
+    mobilePosition: "right_center",
+    label: "Fast and reliable",
+    title: "On-demand fuel and diesel delivery",
+    highlight: "across Nigeriaa and Africa",
+    description:
+      "From PMS, AGO, ATK, DPK, LPG, lubricants, to base oil, our efficient logistics network ensures safe, timely, and seamless delivery across Nigeria and beyond.",
+  },
+
+{
+    image: "/barry_lantern_filling_station.png",
+    mobilePosition: "center",
+   label: "Downstream Supply",
+    title: "Trusted Petroleum",
+    highlight: "Product Supply",
+    description:
+      "Supplying PMS, AGO, and DPK to filling stations and bulk buyers across all regions of Nigeria.",
+  },
+
+
+{
+    image: "/offshore_intake.png",
+    mobilePosition: "center",
+    label: "we provide one of the largest offshore",
+    title: " intake facilities in Nigeria  ",
+    highlight: "",
+    description:
+      "We provide world-class marine logistics and vessel charter services across Nigerian waterways and beyond.",
+  },
+
   {
     image: "/charter.png",
     mobilePosition: "center",
@@ -21,15 +54,17 @@ const slides = [
     description:
       "We provide world-class marine logistics and vessel charter services across Nigerian waterways and beyond.",
   },
+
   {
     image: "/barry_lantern_storage_facilities.png",
     mobilePosition: "center",
-    label: "Our Marine Logistics Services",
-    title: "Reliable Vessel",
-    highlight: "Charter Services",
+    label: "One of Nigeria’s",
+    title: "Leading High-Tech Storage",
+    highlight: "facilities",
     description:
-      "We provide world-class marine logistics and vessel charter services across Nigerian waterways and beyond.",
+      "we provide reliable storage services that meet global standards while supporting sustainable growth and seamless distribution across Nigeria and Africa",
   },
+
   {
     image: "/img 2.jpg",
     mobilePosition: "center",
@@ -39,6 +74,7 @@ const slides = [
     description:
       "We provide world-class marine logistics and vessel charter services across Nigerian waterways and beyond.",
   },
+
   {
     image: "/img 3.jpg",
     mobilePosition: "center",
@@ -48,6 +84,7 @@ const slides = [
     description:
       "Supplying PMS, AGO, and DPK to filling stations and bulk buyers across all regions of Nigeria.",
   },
+
   {
     image: "/barry_lantern_image.jpg",
     mobilePosition: "center",

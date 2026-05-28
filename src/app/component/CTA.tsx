@@ -5,7 +5,7 @@ const CTA = () => {
         Barry Lantern — Rated No. 1 Trusted Oil & Gas Marketing & Logistics Company
       </h2>
       <p className="text-gray-200 text-sm max-w-2xl mx-auto mb-8">
-        Sales and Supply of Petroleum Products, Marine Logistics, and Project Financing. 
+        Sales and Supply of Petroleum Products, Marine Logistics, Provision of instruments and Monetization. 
         Your business is important to us. Get in touch with us to order any of our products or services.
       </p>
       <div className="flex items-center justify-center gap-4 flex-wrap">
