@@ -1,7 +1,6 @@
 import Navbar from "@/app/component/navbar";
 import Footer from "@/app/component/Footer";
 
-
 const posts = [
   {
     date: "30 Apr 2024",
@@ -101,71 +100,77 @@ const posts = [
   },
 ];
 
-const Blog = () => {
+const BlogPage = () => {
   return (
-    <section className="py-16 px-10 bg-gray-50">
-      <div className="max-w-6xl mx-auto">
+    <>
+      <Navbar />
 
-        {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-[#003366]">Our Blog and Press Release</h2>
-          <div className="flex items-center justify-center mt-4 gap-2">
-            <div className="h-[2px] w-16 bg-gray-300"></div>
-            <div className="w-2 h-2 bg-[#f0a500] rotate-45"></div>
-            <div className="h-[2px] w-16 bg-gray-300"></div>
-          </div>
-          <p className="text-gray-500 text-sm mt-4">
-            Get updates on our offers, deals and new products
-          </p>
+      {/* Hero Banner */}
+      <section className="bg-[#001f3f] pt-32 pb-16 px-6 text-center">
+        <p className="text-[#f0a500] text-sm font-bold uppercase tracking-widest mb-3">Barry Lantern Oil & Gas</p>
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Blog & Press Release</h1>
+        <div className="flex items-center justify-center gap-2 mt-4">
+          <div className="h-[2px] w-16 bg-gray-600" />
+          <div className="w-2 h-2 bg-[#f0a500] rotate-45" />
+          <div className="h-[2px] w-16 bg-gray-600" />
         </div>
+        <p className="text-gray-400 text-sm mt-4">
+          Get updates on our offers, deals and new products
+        </p>
+      </section>
 
-        {/* Blog Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {posts.map((post, index) => (
-            <div
-              key={index}
-              className="relative rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
-            >
-              {/* Background Image */}
+      {/* Blog Grid */}
+      <section className="py-16 px-6 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {posts.map((post, index) => (
               <div
-                className="w-full h-96 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                style={{ backgroundImage: `url(${post.image})` }}
-              ></div>
+                key={index}
+                className="relative rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
+              >
+                {/* Background Image */}
+                <div
+                  className="w-full h-96 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                  style={{ backgroundImage: `url(${post.image})` }}
+                />
 
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
 
-              {/* Gold accent line on hover */}
-              <div className="absolute top-0 left-0 w-0 h-1 bg-[#f0a500] group-hover:w-full transition-all duration-500"></div>
+                {/* Gold accent line on hover */}
+                <div className="absolute top-0 left-0 w-0 h-1 bg-[#f0a500] group-hover:w-full transition-all duration-500" />
 
-              {/* Content */}
-              <div className="absolute bottom-0 left-0 right-0 p-8">
-                <span className="text-[#f0a500] text-xs font-semibold uppercase tracking-widest mb-2 block">
-                  {post.date}
-                </span>
-                <h3 className="text-white font-bold text-base leading-snug mb-0 group-hover:mb-3 transition-all duration-300">
-                  {post.title}
-                </h3>
-                <div className="max-h-0 overflow-hidden group-hover:max-h-40 transition-all duration-500">
-                  <p className="text-white/80 text-xs leading-relaxed mt-2">
-                    {post.excerpt}
-                  </p>
-                </div>
-                <div className="mt-0 opacity-0 group-hover:opacity-100 group-hover:mt-3 transition-all duration-500">
-                  <a href={post.link}
-                    className="inline-flex items-center gap-2 bg-[#f0a500] text-black text-xs font-bold px-4 py-2 rounded-full hover:bg-yellow-500 transition-all">
-                    Learn More →
-                  </a>
+                {/* Content */}
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <span className="text-[#f0a500] text-xs font-semibold uppercase tracking-widest mb-2 block">
+                    {post.date}
+                  </span>
+                  <h3 className="text-white font-bold text-base leading-snug mb-0 group-hover:mb-3 transition-all duration-300">
+                    {post.title}
+                  </h3>
+                  <div className="max-h-0 overflow-hidden group-hover:max-h-40 transition-all duration-500">
+                    <p className="text-white/80 text-xs leading-relaxed mt-2">
+                      {post.excerpt}
+                    </p>
+                  </div>
+                  <div className="mt-0 opacity-0 group-hover:opacity-100 group-hover:mt-3 transition-all duration-500">
+                    <a
+                      href={post.link}
+                      className="inline-flex items-center gap-2 bg-[#f0a500] text-black text-xs font-bold px-4 py-2 rounded-full hover:bg-yellow-500 transition-all"
+                    >
+                      Learn More →
+                    </a>
+                  </div>
                 </div>
               </div>
-
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+      </section>
 
-      </div>
-    </section>
+      <Footer />
+    </>
   );
 };
 
-export default Blog;
+export default BlogPage;

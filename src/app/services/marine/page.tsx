@@ -16,7 +16,7 @@ export default function MarinePage() {
       <section className="relative min-h-[60vh] flex items-center justify-center bg-[#0a0a0a] overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-[#001a2a] to-black opacity-90" />
         <div
-          className="absolute inset-0 bg-contain bg-center opacity-20"
+          className="absolute inset-0 bg-cover bg-center opacity-20"
           style={{ backgroundImage: "url('/offshore_marine.png')" }}
         />
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto mt-20">
