@@ -16,8 +16,8 @@ export default function UpstreamPage() {
       <section className="relative min-h-[60vh] flex items-center justify-center bg-[#0a0a0a] overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0d1a2a] to-black opacity-90" />
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: "url('/images/upstream-hero.jpg')" }}
+          className="absolute inset-0 bg-contain bg-center opacity-20"
+          style={{ backgroundImage: "url('/oil_field.png')" }}
         />
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto mt-20">
           <p className="text-[#f0a500] text-sm font-bold uppercase tracking-widest mb-3">Our Services</p>
@@ -58,7 +58,7 @@ export default function UpstreamPage() {
             <div className="bg-[#f5f7fa] rounded-lg p-8 border border-gray-100">
               {/* Replace this placeholder with an image: <img src="/images/upstream-detail.jpg" className="rounded-lg w-full" /> */}
               <div className="h-56 rounded-lg bg-gradient-to-br from-[#003366] to-[#0a1628] flex items-center justify-center">
-                <p className="text-white/40 text-sm">[Add image here]</p>
+                <p className="text-white/40 text-sm"><img src="/industrial_oil_ring.png" alt="Upstream Supply" className="max-w-full max-h-full" /></p>
               </div>
             </div>
           </div>

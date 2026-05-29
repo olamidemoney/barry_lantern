@@ -17,7 +17,7 @@ const About = () => {
           <p className="text-[#f0a500] font-semibold uppercase tracking-widest text-sm mb-2">Who We Are</p>
           <h2 className="text-3xl font-bold text-[#003366] mb-4">Integrated Oil & Gas Solutions You Can Trust</h2>
           <p className="text-gray-600 leading-relaxed mb-8">
-            <strong>Barry Lantern Oil & Gas Limited (RC: 97875)</strong> is a duly registered oil & gas marketing, haulage, and marine logistics company operating across Nigeria. We provide reliable energy solutions spanning upstream and downstream supply, marine logistics, vessel operations, haulage services, and project financing, delivering excellence, efficiency, and integrity across every project.
+            <strong>Barry Lantern Oil & Gas Limited (RC: 97875)</strong> is a duly registered oil & gas marketing, haulage,marine logistics, provision of financial instrument and monetization company operating across Nigeria. We provide reliable energy solutions spanning upstream and downstream supply, marine logistics, vessel operations, haulage services, and financing(SLBC and BG) and monetization, delivering excellence, efficiency, and integrity across every project.
           </p>
 
           {/* Vision */}

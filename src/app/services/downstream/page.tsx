@@ -17,7 +17,7 @@ export default function DownstreamPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-black via-[#1a0d00] to-black opacity-90" />
         <div
           className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: "url('/images/downstream-hero.jpg')" }}
+          style={{ backgroundImage: "url('/barry_lantern_filling_station.png')" }}
         />
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto mt-20">
           <p className="text-[#f0a500] text-sm font-bold uppercase tracking-widest mb-3">Our Services</p>
@@ -57,7 +57,7 @@ export default function DownstreamPage() {
             </div>
             <div className="bg-[#f5f7fa] rounded-lg p-8 border border-gray-100">
               <div className="h-56 rounded-lg bg-gradient-to-br from-[#f0a500] to-[#8a5e00] flex items-center justify-center">
-                <p className="text-white/40 text-sm">[Add image here]</p>
+                <p className="text-white/40 text-sm"><img src="/petrol.png" alt="Downstream Supply" className="max-w-full max-h-full" /></p>
               </div>
             </div>
           </div>
