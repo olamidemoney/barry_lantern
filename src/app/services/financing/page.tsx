@@ -136,7 +136,7 @@ export default function FinancingPage() {
             <div className="bg-[#f5f7fa] rounded-xl overflow-hidden shadow-sm border border-gray-100">
               <div
                 className="w-full h-56 bg-cover bg-center"
-                style={{ backgroundImage: "url('/barry_lantern_image.jpg')" }}
+                style={{ backgroundImage: "url('/slbc.png')" }}
               />
               <div className="p-8">
                 <div className="flex items-center gap-3 mb-3">

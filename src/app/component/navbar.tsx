@@ -74,7 +74,7 @@ const Navbar = () => {
         { label: "Downstream Supply", href: "/services/downstream" },
         { label: "Marine Logistics", href: "/services/marine" },
         { label: "Logistics & Haulage", href: "/services/haulage" },
-        { label: "financial instrument and monetization", href: "/services/financing" },
+        { label: "Financial instrument and Monetization", href: "/services/financing" },
       ],
     },
     {

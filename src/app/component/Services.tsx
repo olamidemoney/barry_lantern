@@ -1,37 +1,37 @@
 import Link from "next/link";
 const services = [
   {
-    image: "/img1.jpg",
+    image: "/petrol.png",
     title: "Downstream Supply",
     slug: "downstream",   // ✅ matches /services/downstream/page.tsx
     description: "...",
   },
   {
-    image: "/img2.jpg",
+    image: "/offshore_marine.png",
     title: "Marine Logistics",
     slug: "marine",       // ✅ matches /services/marine
     description: "...",
   },
   {
-    image: "/img3.jpg",
+    image: "/industrial_oil_ring.png",
     title: "Upstream Supply",
     slug: "upstream",     // ✅ matches /services/upstream
     description: "...",
   },
   {
-    image: "/img4.jpg",
+    image: "/tanker_trucks.png",
     title: "Logistics & Haulage",
     slug: "haulage",      // ✅ matches /services/haulage
     description: "...",
   },
   {
-    image: "/img1.jpg",
+    image: "/slbc.png",
     title: "Project Financing",
     slug: "financing",    // ✅ matches /services/financing/page.tsx
     description: "...",
   },
   {
-    image: "/img2.jpg",
+    image: "/barry_lantern_storage_facilities.png",
     title: "Storage Facilities",
     slug: "storage",      // ⚠️ no folder yet — create /services/storage/page.tsx
     description: "...",
