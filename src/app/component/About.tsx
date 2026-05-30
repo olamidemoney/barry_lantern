@@ -9,7 +9,7 @@ const About = () => {
 <AnimateOnScroll animation="animate-slideInLeft" className="w-full md:w-1/2">
   <div className="w-full h-80 relative overflow-hidden">
     <img
-      src="/barry_lantern.png"
+      src="/tanker_trucks.png"
       alt="Barry Lantern Oil & Gas"
       className="w-full h-full object-cover"
     />

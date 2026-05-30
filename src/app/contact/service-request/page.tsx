@@ -41,8 +41,7 @@ export default function ServiceRequestPage() {
                 <div className="w-10 h-10 bg-[#f0a500] rounded-lg flex items-center justify-center mb-4 text-black text-lg">📍</div>
                 <h3 className="font-bold text-sm uppercase tracking-widest text-[#f0a500] mb-2">Our Office</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  {/* Replace with your actual address */}
-                  [Your Office Address Here]
+                  Nigeria
                 </p>
               </div>
 
@@ -50,8 +49,7 @@ export default function ServiceRequestPage() {
                 <div className="w-10 h-10 bg-[#f0a500] rounded-lg flex items-center justify-center mb-4 text-black text-lg">📞</div>
                 <h3 className="font-bold text-sm uppercase tracking-widest text-[#f0a500] mb-2">Phone</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  {/* Replace with your actual phone */}
-                  [Your Phone Number Here]
+                  08131595373
                 </p>
               </div>
 
@@ -59,10 +57,26 @@ export default function ServiceRequestPage() {
                 <div className="w-10 h-10 bg-[#f0a500] rounded-lg flex items-center justify-center mb-4 text-black text-lg">✉️</div>
                 <h3 className="font-bold text-sm uppercase tracking-widest text-[#f0a500] mb-2">Email</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  {/* Replace with your actual email */}
-                  [Your Email Address Here]
+                  info@barryoilandgas.com
+                </p>
+                <p className="text-gray-300 text-sm leading-relaxed mt-1">
+                  barry_oil@yahoo.com
                 </p>
               </div>
+
+              {/* WhatsApp */}
+              <a
+                href="https://wa.me/2348131595373"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#25d366] rounded-xl p-6 text-white flex items-center gap-4 hover:opacity-90 transition-all"
+              >
+                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-[#25d366] font-bold text-lg shrink-0">W</div>
+                <div>
+                  <h3 className="font-bold text-sm uppercase tracking-widest mb-1">WhatsApp Us</h3>
+                  <p className="text-white/80 text-xs">+234 813 159 5373</p>
+                </div>
+              </a>
 
             </div>
 
@@ -72,15 +86,15 @@ export default function ServiceRequestPage() {
               <p className="text-gray-400 text-sm mb-8">All fields marked * are required.</p>
 
               <form
-                action="https://formsubmit.co/YOUR_EMAIL_HERE"
+                action="https://formsubmit.co/info@barryoilandgas.com"
                 method="POST"
                 className="space-y-5"
               >
-                {/* Honeypot spam prevention */}
+                {/* Spam prevention */}
                 <input type="text" name="_honey" className="hidden" />
                 <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_subject" value="New Service Request — Barry Lantern" />
-                <input type="hidden" name="_next" value="https://yoursite.com/thank-you" />
+                <input type="hidden" name="_subject" value="New Service Request — Barry Lantern Oil & Gas" />
+                <input type="hidden" name="_next" value="https://barryoilandgas.com/thank-you" />
 
                 {/* Full Name + Company */}
                 <div className="grid md:grid-cols-2 gap-5">
@@ -153,6 +167,8 @@ export default function ServiceRequestPage() {
                     <option value="Marine Logistics">Marine Logistics</option>
                     <option value="Logistics & Haulage">Logistics & Haulage</option>
                     <option value="Project Financing">Project Financing</option>
+                    <option value="Financial Instrument & Monetization">Financial Instrument & Monetization</option>
+                    <option value="Distribution of Petroleum Products">Distribution of Petroleum Products</option>
                     <option value="Other">Other</option>
                   </select>
                 </div>
@@ -193,7 +209,7 @@ export default function ServiceRequestPage() {
                 </button>
 
                 <p className="text-xs text-gray-400 text-center">
-                  By submitting this form you agree to be contacted by our team regarding your request.
+                  Barry Lantern Oil & Gas Limited (RC: 97875) — By submitting this form you agree to be contacted by our team regarding your request.
                 </p>
               </form>
             </div>

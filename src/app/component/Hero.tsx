@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const slides = [
   {
-    image: "/barry_lantern.png",
+    image: "/tanker_trucks.png",
     mobilePosition: "right_center",
     label: "Welcome to Barry Lantern Oil & Gas Limited",
     title: "Powering Nigeria's",

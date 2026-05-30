@@ -26,8 +26,8 @@ export default function AboutPage() {
             {/* Left - Image */}
             <div className="w-full md:w-1/2">
               <div
-                className="w-full h-[300px] md:h-[500px] bg-cover bg-center rounded-lg shadow-lg"
-                style={{ backgroundImage: "url('/img2.jpg')" }}
+                className="w-full h-[300px] md:h-[500px] bg-cover bg-right rounded-lg shadow-lg"
+                style={{ backgroundImage: "url('/tanker_trucks.png')" }}
               ></div>
             </div>
 
