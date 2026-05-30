@@ -63,7 +63,7 @@ const Navbar = () => {
       key: "about",
       children: [
         { label: "About Us", href: "/about" },
-        { label: "Blog and Press Release", href: "/blogs" },
+        { label: "Blog and Press Release", href: "/blog" },
       ],
     },
     {

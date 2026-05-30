@@ -1,10 +1,12 @@
+import Link from "next/link";
+
 const posts = [
   {
     date: "30 Apr 2024",
     image: "/blog1.jpg",
     title: "Virgin Oil D6 | Residual Fuel Oil D6",
     excerpt:
-      "Virgin Oil D6 is also known as Residual Fuel Oil and is of high viscosity. This particular fuel oil requires preheating to 220 – 260 Degrees Fahrenheit. D6 is mostly used for generators. D6 is a type of residual fuel, mainly used in power plants and larger ships. The fuel requires to...",
+      "Virgin Oil D6 is also known as Residual Fuel Oil and is of high viscosity. This particular fuel oil requires preheating to 220 – 260 Degrees Fahrenheit. D6 is mostly used for generators...",
     link: "/blog/virgin-oil-d6",
   },
   {
@@ -12,7 +14,7 @@ const posts = [
     image: "/blog2.jpg",
     title: "Liquefied Petroleum Gas (LPG)",
     excerpt:
-      "When you think of buying Liquefied Petroleum Gas (LPG) from credible sources, contact Barry Lantern Oil & Gas Limited. Our vast years of experience in the industry and track record with numerous clients have earned us a respectable place in the oil and gas supply industry...",
+      "When you think of buying Liquefied Petroleum Gas (LPG) from credible sources, contact Barry Lantern Oil & Gas Limited. Our vast years of experience in the industry have earned us a respectable place...",
     link: "/blog/lpg",
   },
   {
@@ -20,7 +22,7 @@ const posts = [
     image: "/blog3.jpg",
     title: "Bonny Light Crude Oil",
     excerpt:
-      "Bonny Light Crude oil is a high-grade Nigerian Crude Oil with high API Gravity and very low sulfur content. It is produced in the Niger Delta Basin and is named after a prolific region around the city of Bonny. It is a highly desired grade crude oil...",
+      "Bonny Light Crude oil is a high-grade Nigerian Crude Oil with high API Gravity and very low sulfur content. It is produced in the Niger Delta Basin and is named after the city of Bonny...",
     link: "/blog/bonny-light-crude",
   },
   {
@@ -28,7 +30,7 @@ const posts = [
     image: "/blog4.jpg",
     title: "Jet Fuel A1",
     excerpt:
-      "We have suppliers of Jet Fuel (JP A1) and other grades. We help serious buyers secure genuine sellers of this product. Barry Lantern Oil & Gas Limited has a widespread network across Africa and the International Market Worldwide...",
+      "We have suppliers of Jet Fuel (JP A1) and other grades. We help serious buyers secure genuine sellers of this product. Barry Lantern has a widespread network across Africa and worldwide...",
     link: "/blog/jet-fuel-a1",
   },
   {
@@ -36,7 +38,7 @@ const posts = [
     image: "/blog5.jpg",
     title: "Petroleum Coke (Petcoke)",
     excerpt:
-      "Petroleum coke, also known as petcoke, is a final carbon-rich solid material that derives from oil refining. Petcoke is derived from a final cracking process — a thermo-based chemical engineering process that splits long-chain hydrocarbons into shorter chains...",
+      "Petroleum coke, also known as petcoke, is a final carbon-rich solid material that derives from oil refining, produced from a thermo-based chemical engineering process...",
     link: "/blog/petcoke",
   },
   {
@@ -44,62 +46,15 @@ const posts = [
     image: "/blog6.jpg",
     title: "Automotive Gas Oil (AGO)",
     excerpt:
-      "Automotive Gas Oil, or AGO, is the name given to fuel intended for use in road vehicles powered by diesel engines. AGO is used in Heavy-duty vehicles such as trucks and buses, and Light-duty vehicles such as vans and passenger cars...",
+      "Automotive Gas Oil, or AGO, is the name given to fuel intended for use in road vehicles powered by diesel engines, including heavy-duty trucks, buses, vans and passenger cars...",
     link: "/blog/ago",
   },
-  {
-    date: "17 Sep 2019",
-    image: "/blog7.jpg",
-    title: "Forcados Light Crude Oil, FLCO",
-    excerpt:
-      "Forcados Light Crude Oil is a high grade of Nigerian Crude Oil produced in the Niger Delta Basin. It is named after the prolific region around the Forcados. It is a highly desired grade crude oil for its uniqueness. We supply Forcados Light Crude Oil to serious buyers...",
-    link: "/blog/forcados-crude",
-  },
-  {
-    date: "17 Sep 2019",
-    image: "/blog8.jpg",
-    title: "Liquefied Natural Gas (LNG)",
-    excerpt:
-      "Liquefied Natural Gas (LNG) is natural gas predominantly methane, CH4, that has been cooled down to liquid form for ease and safety of non-pressurized storage or transport. It takes up about 1/600th the volume of the gas in the gaseous state at standard conditions...",
-    link: "/blog/lng",
-  },
-  {
-    date: "17 Sep 2019",
-    image: "/blog9.jpg",
-    title: "Jet Fuel Colonial Grade 54, JP54",
-    excerpt:
-      "We can supply Aviation Kerosene Colonial Grade JP54 and other grades to serious and capable buyers who can place the required instruments or who own their respective tank storage and can provide ATVs to our Partners, or provide a suitable Bank Instrument to make...",
-    link: "/blog/jp54",
-  },
-  {
-    date: "12 Jul 2019",
-    image: "/blog10.jpg",
-    title: "Mazut M 100 Fuel Oil",
-    excerpt:
-      "Mazut M 100 Fuel oil is supplied according to the Russian technical specification GOST 10585-99. This kind of oil is graded as heavy furnace oil. The product is produced from the remains of raw oil processing and is produced only from the low sulfur...",
-    link: "/blog/mazut-m100",
-  },
-  {
-    date: "11 Jul 2019",
-    image: "/blog11.jpg",
-    title: "5 Tips to Help You Grow Your Business in Nigeria 2019",
-    excerpt:
-      "Starting a business is the first step to owning a business, however having a successful business requires that you sustain and grow that business to ensure it remains alive and benefits your target audience for as long as possible, maybe a century or more...",
-    link: "/blog/grow-business-nigeria",
-  },
-  {
-    date: "16 Sep 2019",
-    image: "/blog12.jpg",
-    title: "Virgin Oil D6 | Residual Fuel Oil D6",
-    excerpt:
-      "Virgin Oil D6 is also known as Residual Fuel Oil and is of high viscosity. This particular fuel oil requires preheating to 220 – 260 Degrees Fahrenheit. D6 is mostly used for generators. D6 is a type of residual fuel, mainly used in power plants and larger ships. The fuel requires to...",
-    link: "/blog/virgin-oil-d6-2",
-  },
+  
 ];
 
 const Blog = () => {
   return (
-    <section className="py-16 px-10 bg-gray-50">
+    <section className="py-16 px-6 md:px-10 bg-gray-50">
       <div className="max-w-6xl mx-auto">
 
         {/* Section Header */}
@@ -116,44 +71,65 @@ const Blog = () => {
         </div>
 
         {/* Blog Grid */}
-        {/* Blog Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {posts.map((post, index) => (
             <div
               key={index}
-              className="relative rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
+              className="rounded-2xl overflow-hidden shadow-lg"
             >
-              {/* Background Image */}
-              <div
-                className="w-full h-72 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                style={{ backgroundImage: `url(${post.image})` }}
-              ></div>
-
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-
-              {/* Gold accent line on hover */}
-              <div className="absolute top-0 left-0 w-0 h-1 bg-[#f0a500] group-hover:w-full transition-all duration-500"></div>
-
-              {/* Content */}
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <span className="text-[#f0a500] text-xs font-semibold uppercase tracking-widest mb-2 block">
-                  {post.date}
-                </span>
-                <h3 className="text-white font-bold text-base leading-snug mb-0 group-hover:mb-3 transition-all duration-300">
-                  {post.title}
-                </h3>
-                <div className="max-h-0 overflow-hidden group-hover:max-h-24 transition-all duration-500">
-                  <p className="text-white/80 text-xs leading-relaxed mt-2">
+              {/* Mobile Layout */}
+              <div className="md:hidden">
+                <div
+                  className="w-full h-48 bg-cover bg-center"
+                  style={{ backgroundImage: `url(${post.image})` }}
+                />
+                <div className="bg-[#001f3f] p-5">
+                  <span className="text-[#f0a500] text-xs font-semibold uppercase tracking-widest mb-2 block">
+                    {post.date}
+                  </span>
+                  <h3 className="text-white font-bold text-base leading-snug mb-2">
+                    {post.title}
+                  </h3>
+                  <p className="text-gray-300 text-xs leading-relaxed mb-4">
                     {post.excerpt}
                   </p>
-                </div>
-                <div className="mt-0 opacity-0 group-hover:opacity-100 group-hover:mt-3 transition-all duration-500">
-                  
-                   <a href={post.link}
-                    className="inline-flex items-center gap-2 bg-[#f0a500] text-black text-xs font-bold px-4 py-2 rounded-full hover:bg-yellow-500 transition-all">
+                  <Link
+                    href={post.link}
+                    className="inline-flex items-center gap-2 bg-[#f0a500] text-black text-xs font-bold px-4 py-2 rounded-full hover:bg-yellow-500 transition-all"
+                  >
                     Learn More →
-                  </a>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Desktop Layout - hover effect */}
+              <div className="hidden md:block relative h-72 group cursor-pointer">
+                <div
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                  style={{ backgroundImage: `url(${post.image})` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                <div className="absolute top-0 left-0 w-0 h-1 bg-[#f0a500] group-hover:w-full transition-all duration-500" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <span className="text-[#f0a500] text-xs font-semibold uppercase tracking-widest mb-2 block">
+                    {post.date}
+                  </span>
+                  <h3 className="text-white font-bold text-base leading-snug mb-0 group-hover:mb-3 transition-all duration-300">
+                    {post.title}
+                  </h3>
+                  <div className="max-h-0 overflow-hidden group-hover:max-h-24 transition-all duration-500">
+                    <p className="text-white/80 text-xs leading-relaxed mt-2">
+                      {post.excerpt}
+                    </p>
+                  </div>
+                  <div className="mt-0 opacity-0 group-hover:opacity-100 group-hover:mt-3 transition-all duration-500">
+                    <Link
+                      href={post.link}
+                      className="inline-flex items-center gap-2 bg-[#f0a500] text-black text-xs font-bold px-4 py-2 rounded-full hover:bg-yellow-500 transition-all"
+                    >
+                      Learn More →
+                    </Link>
+                  </div>
                 </div>
               </div>
 

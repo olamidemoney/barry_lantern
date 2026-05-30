@@ -5,12 +5,16 @@ const About = () => {
     <section className="py-16 px-10 bg-white">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 items-center">
 
-        {/* Left - Image */}
-        <AnimateOnScroll animation="animate-slideInLeft" className="w-full md:w-1/2">
-          <div className="w-full h-80 bg-gray-200 flex items-center justify-center border-2 border-gray-300">
-            <span className="text-gray-400 text-sm">Company Image Here</span>
-          </div>
-        </AnimateOnScroll>
+      {/* Left - Image */}
+<AnimateOnScroll animation="animate-slideInLeft" className="w-full md:w-1/2">
+  <div className="w-full h-80 relative overflow-hidden">
+    <img
+      src="/barry_lantern.png"
+      alt="Barry Lantern Oil & Gas"
+      className="w-full h-full object-cover"
+    />
+  </div>
+</AnimateOnScroll>
 
         {/* Right - Text */}
         <AnimateOnScroll animation="animate-slideInRight" delay="animate-delay-200" className="w-full md:w-1/2">
