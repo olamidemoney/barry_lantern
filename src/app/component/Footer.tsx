@@ -55,7 +55,7 @@ const Footer = () => {
         <div>
           <h4 className="font-bold text-white text-base mb-4 pb-2 border-b border-gray-600">Get in touch with Us</h4>
           <p className="text-gray-400 text-sm leading-relaxed mb-4">
-            Barry Lantern Oil & Gas Limited (RC: 97875) is a duly registered oil & gas marketing and marine logistics company in Nigeria with expertise in petroleum products supply, marine logistics, haulage, and project financing.
+            Barry Lantern Oil & Gas Limited (RC: 976879 ) is a duly registered oil & gas marketing and marine logistics company in Nigeria with expertise in petroleum products supply, marine logistics, haulage, and project financing.
           </p>
           <p className="text-gray-400 text-sm italic">Contact us to get started.</p>
 
@@ -80,7 +80,7 @@ const Footer = () => {
           <a href="/services/financing" className="hover:text-white transition-all">Financial instrument and Monetization</a>
         </div>
         <p className="text-center text-xs text-gray-600 mt-2">
-          Copyright © 2025 Barry Lantern Oil & Gas Limited. All rights reserved. &nbsp;|&nbsp; RC: 97875 &nbsp;|&nbsp; <em>In God We Trust</em>
+          Copyright © 2025 Barry Lantern Oil & Gas Limited. All rights reserved. &nbsp;|&nbsp; RC: 976879  &nbsp;|&nbsp; <em>In God We Trust</em>
         </p>
       </div>
 

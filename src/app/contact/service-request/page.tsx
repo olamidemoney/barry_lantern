@@ -209,7 +209,7 @@ export default function ServiceRequestPage() {
                 </button>
 
                 <p className="text-xs text-gray-400 text-center">
-                  Barry Lantern Oil & Gas Limited (RC: 97875) — By submitting this form you agree to be contacted by our team regarding your request.
+                  Barry Lantern Oil & Gas Limited (RC: 976879 ) — By submitting this form you agree to be contacted by our team regarding your request.
                 </p>
               </form>
             </div>

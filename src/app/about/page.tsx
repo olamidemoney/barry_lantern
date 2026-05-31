@@ -40,7 +40,7 @@ export default function AboutPage() {
               <h2 className="text-2xl md:text-3xl font-bold text-[#003366] mb-2">
                 Barry Lantern Oil & Gas Limited
               </h2>
-              <p className="text-gray-700 font-semibold mb-4">RC: 97875 — Registered Company.</p>
+              <p className="text-gray-700 font-semibold mb-4">RC: 976879  — Registered Company.</p>
               <p className="text-gray-600 leading-relaxed mb-4 text-justify text-sm md:text-base">
                 Barry Lantern Oil & Gas Limited is an indigenous oil and gas marketing and marine
                 logistics company operating across Nigeria. We are active across the downstream

@@ -79,7 +79,7 @@ export default function PartnershipPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { icon: "🌍", title: "Pan-African Reach", desc: "Operating across Nigeria and multiple African markets with established trade networks." },
-              { icon: "🤝", title: "Trusted Partner", desc: "RC: 97875 registered company with a proven track record in oil & gas marketing and logistics." },
+              { icon: "🤝", title: "Trusted Partner", desc: "RC: 976879  registered company with a proven track record in oil & gas marketing and logistics." },
               { icon: "⚡", title: "Fast Execution", desc: "We move quickly on deals and partnerships, ensuring minimal delays in project execution." },
               { icon: "🔒", title: "Confidential & Secure", desc: "All partnership discussions and MOU arrangements handled with strict professional confidentiality." },
               { icon: "💼", title: "Full Service Capability", desc: "From upstream supply to marine logistics, haulage, and project financing — we cover it all." },
