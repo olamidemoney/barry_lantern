@@ -9,90 +9,80 @@ const slides = [
     label: "Welcome to Barry Lantern Oil & Gas Limited",
     title: "Powering Nigeria's",
     highlight: "Energy Future",
-    description:
-      "A leading oil & gas marketing and marine logistics company delivering reliable energy solutions across Nigeria and beyond.",
+    description: "A leading oil & gas marketing and marine logistics company delivering reliable energy solutions across Nigeria and beyond.",
+    serviceLink: "/#services",
   },
-
-
-    {
+  {
     image: "/haulage_trucks.png",
     mobilePosition: "right_center",
     label: "Fast and reliable",
     title: "On-demand fuel and diesel delivery",
-    highlight: "across Nigeriaa and Africa",
-    description:
-      "From PMS, AGO, ATK, DPK, LPG, lubricants, to base oil, our efficient logistics network ensures safe, timely, and seamless delivery across Nigeria and beyond.",
+    highlight: "across Nigeria and Africa",
+    description: "From PMS, AGO, ATK, DPK, LPG, lubricants, to base oil, our efficient logistics network ensures safe, timely, and seamless delivery across Nigeria and beyond.",
+    serviceLink: "/services/haulage",
   },
-
-{
+  {
     image: "/barry_lantern_filling_station.png",
     mobilePosition: "center",
-   label: "Downstream Supply",
+    label: "Downstream Supply",
     title: "Trusted Petroleum",
     highlight: "Product Supply",
-    description:
-      "Supplying PMS, AGO, and DPK to filling stations and bulk buyers across all regions of Nigeria.",
+    description: "Supplying PMS, AGO, and DPK to filling stations and bulk buyers across all regions of Nigeria.",
+    serviceLink: "/services/downstream",
   },
-
-
-{
+  {
     image: "/offshore_intake.png",
     mobilePosition: "center",
-    label: "we provide one of the largest offshore",
-    title: " intake facilities in Nigeria  ",
+    label: "We provide one of the largest offshore",
+    title: "Intake Facilities in Nigeria",
     highlight: "",
-    description:
-      "We provide world-class marine logistics and vessel charter services across Nigerian waterways and beyond.",
+    description: "We provide world-class marine logistics and vessel charter services across Nigerian waterways and beyond.",
+    serviceLink: "/services/marine",
   },
-
   {
     image: "/charter.png",
     mobilePosition: "center",
     label: "Our Marine Logistics Services",
     title: "Reliable Vessel",
     highlight: "Charter Services",
-    description:
-      "We provide world-class marine logistics and vessel charter services across Nigerian waterways and beyond.",
+    description: "We provide world-class marine logistics and vessel charter services across Nigerian waterways and beyond.",
+    serviceLink: "/services/marine",
   },
-
   {
     image: "/barry_lantern_storage_facilities.png",
     mobilePosition: "center",
-    label: "One of Nigeria’s",
+    label: "One of Nigeria's",
     title: "Leading High-Tech Storage",
-    highlight: "facilities",
-    description:
-      "we provide reliable storage services that meet global standards while supporting sustainable growth and seamless distribution across Nigeria and Africa",
+    highlight: "Facilities",
+    description: "We provide reliable storage services that meet global standards while supporting sustainable growth and seamless distribution across Nigeria and Africa.",
+    serviceLink: "/services/marine",
   },
-
   {
     image: "/img 2.jpg",
     mobilePosition: "center",
     label: "Our Marine Logistics Services",
     title: "Reliable Vessel",
     highlight: "Charter Services",
-    description:
-      "We provide world-class marine logistics and vessel charter services across Nigerian waterways and beyond.",
+    description: "We provide world-class marine logistics and vessel charter services across Nigerian waterways and beyond.",
+    serviceLink: "/services/marine",
   },
-
   {
     image: "/img 3.jpg",
     mobilePosition: "center",
     label: "Downstream Supply",
     title: "Trusted Petroleum",
     highlight: "Product Supply",
-    description:
-      "Supplying PMS, AGO, and DPK to filling stations and bulk buyers across all regions of Nigeria.",
+    description: "Supplying PMS, AGO, and DPK to filling stations and bulk buyers across all regions of Nigeria.",
+    serviceLink: "/services/downstream",
   },
-
   {
     image: "/slbc.png",
     mobilePosition: "center",
     label: "Project Financing",
     title: "Unlocking Nigeria's",
     highlight: "Energy Investments",
-    description:
-      "We facilitate SBLC, BG, DLC, and POF financial instruments for oil & gas projects locally and internationally.",
+    description: "We facilitate SBLC, BG, DLC, and POF financial instruments for oil & gas projects locally and internationally.",
+    serviceLink: "/services/financing",
   },
 ];
 
@@ -185,7 +175,7 @@ const Hero = () => {
 
             <div className="anim-buttons flex gap-3 flex-wrap">
               
-                <a href="/services"
+                <a href={slide.serviceLink}
                 className="bg-[#f0a500] text-black font-bold px-5 py-2 sm:px-8 sm:py-3 text-sm md:text-base rounded hover:bg-yellow-500 transition-all"
               >
                 Our Services
