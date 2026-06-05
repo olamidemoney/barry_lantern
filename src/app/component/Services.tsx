@@ -41,69 +41,43 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="scroll-mt-[100px] py-16 px-6 md:px-10 bg-gray-50" >
+    <section id="services" className="scroll-mt-[72px] py-12 sm:py-16 px-4 sm:px-8 bg-gray-50">
       <div className="max-w-6xl mx-auto">
 
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <p className="text-[#f0a500] font-semibold uppercase tracking-widest text-sm mb-2">
+        <div className="text-center mb-10 sm:mb-12">
+          <p className="text-[#f0a500] font-semibold uppercase tracking-widest text-xs sm:text-sm mb-2">
             What We Offer
           </p>
-          <h2 className="text-3xl font-bold text-[#003366]">Our Premium Services</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#003366]">Our Premium Services</h2>
           <div className="flex items-center justify-center mt-4 gap-2">
-            <div className="h-[2px] w-16 bg-gray-300"></div>
-            <div className="w-2 h-2 bg-[#f0a500] rotate-45"></div>
-            <div className="h-[2px] w-16 bg-gray-300"></div>
+            <div className="h-[2px] w-12 sm:w-16 bg-gray-300" />
+            <div className="w-2 h-2 bg-[#f0a500] rotate-45" />
+            <div className="h-[2px] w-12 sm:w-16 bg-gray-300" />
           </div>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {/* Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {services.map((service, index) => (
             <div key={index} className="rounded-xl overflow-hidden shadow-md">
 
-              {/* Mobile Layout */}
-              <div className="md:hidden">
-                <div
-                  className="w-full h-48 bg-cover bg-center"
-                  style={{ backgroundImage: `url(${service.image})` }}
-                />
-                <div className="bg-[#001f3f] p-5">
-                  <h3 className="text-white font-bold text-base mb-2">{service.title}</h3>
-                  <p className="text-gray-300 text-sm leading-relaxed mb-4">{service.description}</p>
-                  <Link
-                    href={`/services/${service.slug}`}
-                    className="inline-block text-xs font-bold text-black bg-[#f0a500] px-4 py-2 rounded hover:bg-yellow-500 transition-all"
-                  >
-                    Read More →
-                  </Link>
-                </div>
-              </div>
+              {/* Shared image */}
+              <div
+                className="w-full h-44 sm:h-48 bg-cover bg-center"
+                style={{ backgroundImage: `url(${service.image})` }}
+              />
 
-              {/* Desktop Layout - hover effect */}
-              <div className="hidden md:block relative h-64 group cursor-pointer">
-                <div
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                  style={{ backgroundImage: `url(${service.image})` }}
-                />
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/65 transition-all duration-500" />
-
-                {/* Default - title at bottom */}
-                <div className="absolute bottom-0 left-0 right-0 p-5 group-hover:opacity-0 transition-all duration-300">
-                  <h3 className="text-white font-bold text-lg">{service.title}</h3>
-                </div>
-
-                {/* Hover - slides up */}
-                <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-full group-hover:translate-y-0 transition-all duration-500">
-                  <h3 className="text-white font-bold text-lg mb-2">{service.title}</h3>
-                  <p className="text-white/90 text-sm leading-relaxed mb-3">{service.description}</p>
-                  <Link
-                    href={`/services/${service.slug}`}
-                    className="inline-block text-xs font-bold text-black bg-[#f0a500] px-4 py-2 rounded hover:bg-yellow-500 transition-all"
-                  >
-                    Read More →
-                  </Link>
-                </div>
+              {/* Content card */}
+              <div className="bg-[#001f3f] p-4 sm:p-5">
+                <h3 className="text-white font-bold text-sm sm:text-base mb-2">{service.title}</h3>
+                <p className="text-gray-300 text-xs sm:text-sm leading-relaxed mb-4">{service.description}</p>
+                <Link
+                  href={`/services/${service.slug}`}
+                  className="inline-block text-xs font-bold text-black bg-[#f0a500] px-4 py-2 rounded hover:bg-yellow-500 transition-all"
+                >
+                  Read More →
+                </Link>
               </div>
 
             </div>

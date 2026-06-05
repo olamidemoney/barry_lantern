@@ -1,25 +1,42 @@
 const CTA = () => {
   return (
-    <section className="bg-[#6b7a8d] py-16 px-10 text-center text-white">
-      <h2 className="text-3xl font-bold mb-4">
-        Barry Lantern — Rated No. 1 Trusted Oil & Gas Marketing & Logistics Company
+    <section className="bg-[#6b7a8d] py-12 sm:py-16 px-4 sm:px-8 text-center text-white">
+
+      <h2 className="font-bold mb-4 leading-tight
+                     text-xl
+                     sm:text-2xl
+                     md:text-3xl
+                     max-w-3xl mx-auto">
+        Barry Lantern — Rated No.&nbsp;1 Trusted<br className="hidden sm:block" />
+        Oil &amp; Gas Marketing &amp; Logistics Company
       </h2>
-      <p className="text-gray-200 text-sm max-w-2xl mx-auto mb-8">
-        Sales and Supply of Petroleum Products, Marine Logistics, Provision of instruments and Monetization. 
-        Your business is important to us. Get in touch with us to order any of our products or services.
+
+      <p className="text-gray-200 text-sm sm:text-base max-w-xl mx-auto mb-8 leading-relaxed">
+        Sales and Supply of Petroleum Products, Marine Logistics, Provision of instruments
+        and Monetization. Your business is important to us.
       </p>
-      <div className="flex items-center justify-center gap-4 flex-wrap">
-        
-          <a href="/contact"
-          className="bg-[#003366] text-white font-bold px-8 py-3 uppercase text-sm tracking-widest hover:bg-[#f0a500] hover:text-black transition-all flex items-center gap-2">
+
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+        <a
+          href="/contact"
+          className="w-full sm:w-auto bg-[#003366] text-white font-bold
+                     px-6 py-3 uppercase text-xs sm:text-sm tracking-widest
+                     hover:bg-[#f0a500] hover:text-black transition-all
+                     flex items-center justify-center gap-2"
+        >
           Contact Us ▶
         </a>
-        
-          <a href="/contact/service-request"
-          className="border-2 border-white text-white font-bold px-8 py-3 uppercase text-sm tracking-widest hover:bg-white hover:text-[#003366] transition-all flex items-center gap-2">
+        <a
+          href="/contact/service-request"
+          className="w-full sm:w-auto border-2 border-white text-white font-bold
+                     px-6 py-3 uppercase text-xs sm:text-sm tracking-widest
+                     hover:bg-white hover:text-[#003366] transition-all
+                     flex items-center justify-center gap-2"
+        >
           Request a Service ▶
         </a>
       </div>
+
     </section>
   );
 };
