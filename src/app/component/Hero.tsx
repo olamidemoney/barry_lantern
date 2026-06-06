@@ -58,7 +58,7 @@ const slides = [
     serviceLink: "/services/marine",
   },
   {
-    image: "/img 2.jpg",
+    image: "/vessel.png",
     mobilePosition: "center",
     label: "Marine Logistics Services",
     title: "Reliable Vessel",
