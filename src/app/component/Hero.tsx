@@ -76,14 +76,14 @@ const slides = [
     serviceLink: "/services/downstream",
   },
   {
-    image: "/slbc.png",
-    mobilePosition: "center",
-    label: "Project Financing",
-    title: "Unlocking Nigeria's",
-    highlight: "Energy Investments",
-    description: "SBLC, BG, DLC, and POF financial instruments for oil & gas projects locally and internationally.",
-    serviceLink: "/services/financing",
-  },
+  image: "/slbc.png",
+  mobilePosition: "center",
+  label: "Project Financing",
+  title: "Providers of Fresh Cut",
+  highlight: "BG & SBLC for Lease",
+  description: "Our bank instruments can be engaged in PPP Trading, Discounting Signature Projects across Construction, Oil & Gas, Telecommunication, and more — locally and internationally.",
+  serviceLink: "/services/financing",
+},
 ];
 
 const Hero = () => {
@@ -146,113 +146,83 @@ const Hero = () => {
         .anim-buttons   { animation: slideFromBottom 0.7s ease 0.45s    both; }
       `}</style>
 
-      <section
-        className="relative w-full bg-cover bg-no-repeat flex items-center transition-all duration-700"
-        style={{
-          backgroundImage: `url('${slide.image}')`,
-          backgroundPosition: bgPosition,
-          /* Fills full viewport minus navbar (~56px mobile, ~64px desktop) */
-          minHeight: "60vh",
-          paddingTop: "56px",
-        }}
-      >
-        {/* Dark overlay — slightly heavier on mobile for text legibility */}
-        <div className="absolute inset-0 bg-black/50 sm:bg-black/40" />
+    <section
+  className="
+    relative
+    w-full
+    bg-cover
+    bg-no-repeat
+    flex
+    items-center
+    transition-all
+    duration-700
+    mt-14
+    sm:mt-16
+    min-h-[60vh]
+    md:min-h-[65vh]
+    lg:min-h-[75vh]
+  "
+  style={{
+    backgroundImage: `url('${slide.image}')`,
+    backgroundPosition: bgPosition,
+  }}
+>
+  {/* Dark overlay */}
+  <div className="absolute inset-0 bg-black/50 sm:bg-black/40" />
 
-        {/* Content */}
-        {animating && (
-          <div className="relative z-10 w-full px-4 sm:px-8 md:px-14 lg:px-20 py-10 sm:py-0">
-            <div className="max-w-xl">
+  {/* Content */}
+  {animating && (
+    <div className="relative z-10 w-full px-4 sm:px-8 md:px-14 lg:px-20 py-12">
+      <div className="max-w-xl lg:max-w-2xl">
 
-              <p className="anim-label text-[#f0a500] font-semibold tracking-widest uppercase text-[10px] sm:text-xs mb-2">
-                {slide.label}
-              </p>
+        <p className="anim-label text-[#f0a500] font-semibold tracking-widest uppercase text-[10px] sm:text-xs mb-2">
+          {slide.label}
+        </p>
 
-              <h2 className="font-bold leading-tight mb-3 md:mb-5 text-white
-                             text-2xl   
-                             xs:text-3xl
-                             sm:text-4xl
-                             md:text-5xl
-                             lg:text-6xl">
-                <span className="anim-title block">{slide.title}</span>
-                {slide.highlight && (
-                  <span className="anim-highlight block text-[#f0a500]">{slide.highlight}</span>
-                )}
-              </h2>
-
-              <p className="anim-desc text-gray-200 leading-relaxed mb-5 md:mb-8
-                            text-xs sm:text-sm md:text-base
-                            max-w-[90%] sm:max-w-sm md:max-w-none">
-                {slide.description}
-              </p>
-
-              <div className="anim-buttons flex gap-3 flex-wrap">
-                <a
-                  href={slide.serviceLink}
-                  className="bg-[#f0a500] text-black font-bold rounded transition-all hover:bg-yellow-500
-                             px-5 py-2.5 text-xs
-                             sm:px-7 sm:py-3 sm:text-sm
-                             md:px-8 md:text-base"
-                >
-                  Our Services
-                </a>
-                <a
-                  href="/contact"
-                  className="border-2 border-white text-white font-bold rounded transition-all hover:bg-white hover:text-black
-                             px-5 py-2.5 text-xs
-                             sm:px-7 sm:py-3 sm:text-sm
-                             md:px-8 md:text-base"
-                >
-                  Contact Us
-                </a>
-              </div>
-
-            </div>
-          </div>
-        )}
-
-        {/* Dot Navigation */}
-        <div className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 flex gap-1.5 md:gap-2 z-10">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goTo(index)}
-              aria-label={`Go to slide ${index + 1}`}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                index === current
-                  ? "bg-[#f0a500] w-5 md:w-6"
-                  : "bg-white/50 w-2"
-              }`}
-            />
-          ))}
-        </div>
-
-        {/* Arrow Navigation */}
-        <button
-          onClick={() => goTo((current - 1 + slides.length) % slides.length)}
-          aria-label="Previous slide"
-          className="absolute left-2 sm:left-4 md:left-6 top-1/2 -translate-y-1/2 z-10
-                     bg-white/20 hover:bg-[#f0a500] text-white rounded-full
-                     flex items-center justify-center transition-all
-                     w-8 h-8 text-base
-                     sm:w-10 sm:h-10 sm:text-lg
-                     md:w-12 md:h-12 md:text-xl"
+        <h2
+          className="font-bold leading-tight mb-3 md:mb-5 text-white
+                     text-2xl
+                     xs:text-3xl
+                     sm:text-4xl
+                     md:text-5xl
+                     lg:text-6xl"
         >
-          ‹
-        </button>
-        <button
-          onClick={() => goTo((current + 1) % slides.length)}
-          aria-label="Next slide"
-          className="absolute right-2 sm:right-4 md:right-6 top-1/2 -translate-y-1/2 z-10
-                     bg-white/20 hover:bg-[#f0a500] text-white rounded-full
-                     flex items-center justify-center transition-all
-                     w-8 h-8 text-base
-                     sm:w-10 sm:h-10 sm:text-lg
-                     md:w-12 md:h-12 md:text-xl"
+          <span className="anim-title block">{slide.title}</span>
+          {slide.highlight && (
+            <span className="anim-highlight block text-[#f0a500]">
+              {slide.highlight}
+            </span>
+          )}
+        </h2>
+
+        <p
+          className="anim-desc text-gray-200 leading-relaxed mb-5 md:mb-8
+                     text-xs sm:text-sm md:text-base
+                     max-w-[90%] sm:max-w-sm md:max-w-none"
         >
-          ›
-        </button>
-      </section>
+          {slide.description}
+        </p>
+
+        
+          <div className="anim-buttons flex gap-3 flex-wrap">
+  
+   <a href={slide.serviceLink}
+    className="inline-block bg-[#f0a500] hover:bg-[#d4920a] text-white font-semibold px-5 py-2.5 sm:px-6 sm:py-3 text-sm sm:text-base transition-colors duration-200 rounded-sm"
+  >
+    Our Services
+  </a>
+  
+    <a href="/contact"
+    className="inline-block border-2 border-white hover:border-[#f0a500] hover:text-[#f0a500] text-white font-semibold px-5 py-2.5 sm:px-6 sm:py-3 text-sm sm:text-base transition-colors duration-200 rounded-sm">
+    Contact Us
+  </a>
+</div>
+        
+
+      </div>
+    </div>
+  )}
+</section>
     </>
   );
 };
