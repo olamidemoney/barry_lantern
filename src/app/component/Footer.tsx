@@ -100,14 +100,14 @@ const Footer = () => {
       <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
     </svg>
   </a>
-  <a href="https://linkedin.com/company/barryoilandgas" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+  <a href="https://www.linkedin.com/in/barry-lantern-oil-and-gas-1418b1413" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
     className="bg-[#0a66c2] w-9 h-9 rounded-full flex items-center justify-center hover:opacity-80 transition-all">
     <svg viewBox="0 0 24 24" fill="white" className="w-4 h-4">
       <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
       <circle cx="4" cy="4" r="2"/>
     </svg>
   </a>
-  <a href="https://x.com/barryoilandgas" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"
+  <a href="https://x.com/Barryoilandgas" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"
     className="bg-[#000000] w-9 h-9 rounded-full flex items-center justify-center hover:opacity-80 transition-all">
     <svg viewBox="0 0 24 24" fill="white" className="w-4 h-4">
       <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.91-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
