@@ -18,11 +18,11 @@ const Contact = () => {
         {/* Left - Image */}
         <div
           className="h-96 md:h-auto bg-cover bg-center"
-          style={{ backgroundImage: "url('/contact-img.jpg')" }}
+          style={{ backgroundImage: "url('/contact.jpg')" }}
         >
-          <div className="w-full h-full flex items-center justify-center bg-gray-700/50">
+          {/* <div className="w-full h-full flex items-center justify-center bg-gray-700/50">
             <span className="text-gray-300 text-sm">Image Here</span>
-          </div>
+          </div> */}
         </div>
 
         {/* Middle - Contact Form */}
